@@ -11,7 +11,8 @@ class ExTestController extends Controller
         if($text = "デフォルトです"){
             return $text;
         }elseif($textnumber >= 10){
-            return "テキストは" . "$textnumber" . "文字です";
+            $textnumber = "$text";
+            echo "テキストは" . strlen($textnumber) . "文字です";
         }else{
             return "テキストは10文字未満です";
         }

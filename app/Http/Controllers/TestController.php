@@ -6,19 +6,8 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
-    public function index()
+    public function index($text = "デフォルト")
     {
-        $item = [
-            'content' => '自由に入力してください',
-        ];
-        return view('index', $item);
-    }
-    public function post(Request $request)
-    {
-        $content = $request->content;
-        $item =[
-            'content' => $content . 'と入力しましたね'
-        ];
-        return view('index', $item);
+        return $text;
     }
 }
